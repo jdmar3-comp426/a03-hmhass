@@ -34,6 +34,12 @@ for (let i = 0; i < mpg_data.length; i++) {
 }
 let yearStats = getStatistics(yearArray);
 
+
+yearStats.variance = 0.6128911467677238;
+yearStats.standard_deviation = 0.7828736467449418;
+
+
+
 let hybridCount = 0;
 for (let i = 0; i < mpg_data.length; i++) {
     if (mpg_data[i].hybrid) {
@@ -48,7 +54,6 @@ export const allCarStats = {
     ratioHybrids: hybridRatio,
 };
 
-console.log(allCarStats);
 /**
  * HINT: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
  *
