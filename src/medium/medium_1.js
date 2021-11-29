@@ -1,4 +1,5 @@
 import {variance} from "./data/stats_helpers.js";
+import { maxAndMin } from "../mild/mild_1.js";
 
 /**
  * Gets the sum of an array of numbers.
@@ -9,9 +10,8 @@ import {variance} from "./data/stats_helpers.js";
  */
 export function getSum(array) {
     let sum = 0;
-    for (let i = 0; i <= array.length; i++) {
-        sum += array[i];
-
+    for (let i = 0; i < array.length; i++) {
+        sum = sum + array[i];
     }
     return sum;
 
@@ -28,7 +28,16 @@ export function getSum(array) {
  * console.log(getMedian(array)); // 4.5
  */
 export function getMedian(array) {
-
+    let copy = array.sort(function(a, b){return b - a});
+    if (array.length % 2 !== 0) {
+        let i = Math.floor(array.length / 2);
+        return copy[i];
+    } else {
+        let upper = array.length / 2;
+        let lower = upper - 1;
+        let result = copy[lower] + copy[upper];
+        return result / 2;
+    }
 }
 
 /**
@@ -51,6 +60,16 @@ export function getMedian(array) {
  }
  */
 export function getStatistics(array) {
+    let length = array.length;
+    let sum = getSum(array);
+    let median = getMedian(array);
+    let min = Math.min.apply(null, array);
+    let max = Math.max.apply(null, array);
+    let mean = sum / length;
+    let vari = variance(array, mean);
+    let stddev = Math.sqrt(vari);
+    let result = {min : min, median : median, max : max, variance : vari, mean : mean, length : length, sum : sum, standard_deviation : stddev };
+    return result;
 
 }
 
