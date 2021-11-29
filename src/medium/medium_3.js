@@ -24,7 +24,7 @@ export function searchHighPower(car_data, minHorsepower, minTorque) {
             qualify.push(car_data[i]);
         }
     }
-    qualify.sort((a, b) => (a.horsepower > b.horsepower) ? 1 : -1);
+    qualify.sort((a, b) => (a.horsepower < b.horsepower) ? 1 : -1);
     return qualify;
 
 
