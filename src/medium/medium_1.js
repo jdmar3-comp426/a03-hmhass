@@ -68,7 +68,8 @@ export function getStatistics(array) {
     let mean = sum / length;
     let vari = variance(array, mean);
     let stddev = Math.sqrt(vari);
-    let result = {min : min, median : median, max : max, variance : vari, mean : mean, length : length, sum : sum, standard_deviation : stddev };
+    let oldResult = {min : min, median : median, max : max, variance : vari, mean : mean, length : length, sum : sum, standard_deviation : stddev };
+    let result = {length : length, sum : sum, mean : mean, median : median, min : min, max : max, variance : vari, standard_deviation : stddev };
     return result;
 
 }
