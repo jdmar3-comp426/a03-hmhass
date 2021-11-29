@@ -48,7 +48,7 @@ export const allCarStats = {
     ratioHybrids: hybridRatio,
 };
 
-
+console.log(allCarStats);
 /**
  * HINT: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
  *

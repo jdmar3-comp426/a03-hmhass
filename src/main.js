@@ -63,3 +63,7 @@ import { getStatistics } from "./medium/medium_1";
 console.log(getStatistics([3,2,4,5,5,5,2,6,7]))
 
 */
+
+import { maxAndMin } from "./mild/mild_1";
+
+console.log(maxAndMin([1, 2, 3, 4, 5, 4, 7, 2, 0]));
