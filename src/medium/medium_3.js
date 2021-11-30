@@ -25,10 +25,12 @@ export function searchHighPower(car_data, minHorsepower, minTorque) {
         }
     }
     qualify.sort((a, b) => (a.horsepower < b.horsepower) ? 1 : -1);
+    qualify.pop();
     return qualify;
 
 
 }
+/* console.log(searchHighPower(mpg_data, 630, 500)); */
 
 
 
