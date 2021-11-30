@@ -49,7 +49,11 @@ export const repeatDemo = () => {
  *   parameter "num2". The returned function should calculate and return the
  *   product of num1 and num2.
  */
+
 export const multiplyBy = (num1) => {
+    return function(num2) {
+        return num1 * num2;
+    }
 
 };
 
