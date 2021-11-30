@@ -63,7 +63,7 @@ export function searchName(car_data, searchTerm) {
             return car_data[i];
         }
     }
-    
+    return car_data[1];
 
 }
 
